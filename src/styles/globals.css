@@ -3,54 +3,78 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+	--background: #ffffff;
+	--foreground: #171717;
 }
 
 @media (prefers-color-scheme: light) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+	:root {
+		--background: #0a0a0a;
+		--foreground: #ededed;
+	}
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  height: 100%;
+	color: var(--foreground);
+	background: var(--background);
+	font-family: Arial, Helvetica, sans-serif;
+	height: 100%;
 }
 
 .page-body {
-  height: calc(100% - 24px);
+	height: calc(100% - 24px);
 }
 
 .page-link {
-  cursor: pointer;
-  border-radius: 4px;
-  height: 24px;
-  align-self: center;
+	cursor: pointer;
+	border-radius: 4px;
+	height: 24px;
+	align-self: center;
 
-  &:hover {
-    background-color: #464545;
-  }
+	&:hover {
+		background-color: #464545;
+	}
 }
 
 .nav-bar {
-  padding-left: 20px;
-  padding-right: 20px;
-  border: 1px white solid;
-  padding-top: 4px;
-  padding-bottom: 4px;
+	padding-left: 20px;
+	padding-right: 20px;
+	border: 1px white solid;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+
+.nav-link-active {
+	font-weight: bold;
+	text-decoration: underline;
 }
 
 .follow-btn {
-  border-radius: 4px;
-  background-color: #6161b5;
+	border-radius: 4px;
+	background-color: #6161b5;
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+	.text-balance {
+		text-wrap: balance;
+	}
+}
+
+.not-found-page {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	height: calc(100vh - 24px);
+}
+
+.not-found-page span {
+	font-size: 24px;
+}
+
+.not-found-page a {
+	text-decoration: underline;
 }
